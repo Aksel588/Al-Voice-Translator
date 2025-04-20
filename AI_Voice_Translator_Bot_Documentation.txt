@@ -1,0 +1,133 @@
+🧠 AI Voice Translator Telegram Bot
+
+📋 Overview
+
+AI Voice Translator is a Telegram bot that allows users to translate voice messages, text, and PDF files into over 30 languages. The bot uses OpenAI Whisper for voice transcription and Google Translate for language translation, giving users flexible output formats like text, voice, or PDF.
+
+⸻
+
+💡 Features
+	•	🎤 Voice-to-text transcription and translation
+	•	🌐 Translate text messages into 30+ languages
+	•	📄 PDF message support (notification only for now)
+	•	🔉 Choose output format: Text / Voice / PDF
+	•	🛠 Language and format settings via /settings command
+
+⸻
+
+🧰 Requirements
+
+✅ Python Version
+	•	Python 3.11.8 or later is recommended
+Check your Python version:
+
+python3 --version
+
+
+
+✅ Install Python (if not installed)
+
+macOS:
+
+brew install python
+
+Ubuntu/Debian:
+
+sudo apt update
+sudo apt install python3 python3-pip
+
+Windows:
+Download and install from: https://www.python.org/downloads/
+
+⸻
+
+📦 Install Dependencies
+
+Install Required Python Libraries
+
+pip install -r requirements.txt
+
+If you don’t have a requirements.txt, manually install:
+
+pip install pyTelegramBotAPI googletrans==4.0.0-rc1 gTTS fpdf openai-whisper
+
+
+
+⸻
+
+🔊 Install FFmpeg
+
+FFmpeg is required to convert OGG voice messages into WAV for processing by Whisper.
+
+macOS:
+
+brew install ffmpeg
+
+Ubuntu/Debian:
+
+sudo apt install ffmpeg
+
+Windows:
+Download from https://ffmpeg.org/download.html
+Add ffmpeg/bin to your system’s PATH.
+
+⸻
+
+▶️ How to Run the Bot
+
+python main.py
+
+Make sure your Telegram Bot Token is correctly set inside main.py.
+
+⸻
+
+🧪 Quick Test
+	1.	Start the bot on Telegram with /start
+	2.	Use /settings to choose your language and output format
+	3.	Send a voice message or text — get your translation back!
+
+⸻
+
+💾 File Structure
+
+main.py                   # Main bot script
+requirements.txt          # Python dependencies
+output.mp3                # Translated voice file
+output.pdf                # Translated PDF
+audio.ogg / audio.wav     # Temporary audio conversion
+
+
+
+⸻
+
+🏗 Technologies Used
+	•	Python 3.11+
+	•	pyTelegramBotAPI – Telegram Bot API
+	•	OpenAI Whisper – Speech recognition
+	•	Google Translate (googletrans) – Translation
+	•	gTTS – Voice output
+	•	FPDF – PDF generation
+	•	FFmpeg – Audio format conversion
+
+⸻
+
+📚 Commands
+	•	/start – Welcome message and usage guide
+	•	/settings – Change output language and format
+	•	Voice Message – Transcribe and translate
+	•	Text Message – Translate
+	•	PDF File – Notify receipt (no content extraction yet)
+
+⸻
+
+📈 Coming Soon
+	•	✅ PDF content translation
+	•	✅ Inline translations
+	•	✅ Language auto-detection
+	•	✅ Statistics and usage analytics
+
+⸻
+
+📜 License
+
+Open-source under the MIT License.
